@@ -123,21 +123,21 @@ export default function PWAInstall() {
       {showManualInstall && !deferredPrompt && (
         <div className="fixed top-0 left-0 right-0 bg-amber-500 text-white p-3 sm:p-4 shadow-lg z-50 animate-slideDown">
           <div className="max-w-6xl mx-auto">
-            <div className="flex items-start justify-between gap-3">
+            <div className="flex items-start justify-between gap-2">
               <div className="flex-1 min-w-0">
-                <p className="font-semibold text-sm sm:text-base mb-1">📱 Install App</p>
-                <div className="text-xs sm:text-sm opacity-95 space-y-1">
+                <p className="font-semibold text-sm sm:text-base mb-2">📱 Install App</p>
+                <div className="text-xs sm:text-sm opacity-95 space-y-1.5">
                   <p>
-                    <strong>🍎 iPhone (Safari):</strong> Tap Share → Add to Home Screen
+                    <strong>🍎 iPhone:</strong> <span className="block sm:inline">Tap Share → Add to Home Screen</span>
                   </p>
                   <p>
-                    <strong>🤖 Android (Chrome):</strong> Tap Menu (⋮) → Install app
+                    <strong>🤖 Android:</strong> <span className="block sm:inline">Tap Menu (⋮) → Install app</span>
                   </p>
                 </div>
               </div>
               <button
                 onClick={() => setShowManualInstall(false)}
-                className="flex-shrink-0 text-xl leading-none hover:opacity-75 transition-opacity"
+                className="flex-shrink-0 text-lg leading-none hover:opacity-75 transition-opacity"
                 aria-label="Close install prompt"
               >
                 ✕
