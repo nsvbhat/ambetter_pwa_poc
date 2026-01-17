@@ -38,22 +38,9 @@ export default function DashboardPage() {
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         {/* Welcome Section */}
         <div className="mb-8 sm:mb-12">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div>
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
-                Welcome back! 👋
-              </h1>
-              {isMounted && userEmail && (
-                <p className="text-gray-600 text-xs sm:text-sm mt-2">{userEmail}</p>
-              )}
-            </div>
-            <button
-              onClick={handleLogout}
-              className="bg-red-600 hover:bg-red-700 text-white px-3 sm:px-4 py-2 rounded-lg font-medium text-xs sm:text-sm self-start sm:self-auto"
-            >
-              Logout
-            </button>
-          </div>
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
+            Welcome back! 👋
+          </h1>
         </div>
 
         {/* Quick Actions Grid */}
@@ -117,33 +104,33 @@ export default function DashboardPage() {
 
         {/* Coming Soon Features */}
         <div className="bg-pink-50 border border-pink-200 rounded-lg p-4 sm:p-6 lg:p-8">
-          <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4">
+          <h2 className="text-lg sm:text-xl font-semibold text-pink-700 mb-4">
             Available 24/7
           </h2>
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             <li className="flex items-center gap-2">
               <span className="text-green-600">✓</span>
-              <span className="text-xs sm:text-sm text-gray-700">View coverage details</span>
+              <span className="text-xs sm:text-sm text-pink-700">View coverage details</span>
             </li>
             <li className="flex items-center gap-2">
               <span className="text-green-600">✓</span>
-              <span className="text-xs sm:text-sm text-gray-700">Download ID cards</span>
+              <span className="text-xs sm:text-sm text-pink-700">Download ID cards</span>
             </li>
             <li className="flex items-center gap-2">
               <span className="text-green-600">✓</span>
-              <span className="text-xs sm:text-sm text-gray-700">Check claims status</span>
+              <span className="text-xs sm:text-sm text-pink-700">Check claims status</span>
             </li>
             <li className="flex items-center gap-2">
               <span className="text-green-600">✓</span>
-              <span className="text-xs sm:text-sm text-gray-700">Find doctors & facilities</span>
+              <span className="text-xs sm:text-sm text-pink-700">Find doctors & facilities</span>
             </li>
             <li className="flex items-center gap-2">
               <span className="text-green-600">✓</span>
-              <span className="text-xs sm:text-sm text-gray-700">Update personal info</span>
+              <span className="text-xs sm:text-sm text-pink-700">Update personal info</span>
             </li>
             <li className="flex items-center gap-2">
               <span className="text-green-600">✓</span>
-              <span className="text-xs sm:text-sm text-gray-700">Message support</span>
+              <span className="text-xs sm:text-sm text-pink-700">Message support</span>
             </li>
           </ul>
         </div>

@@ -79,14 +79,6 @@ export default function Navigation() {
                 >
                   Enrollment
                 </Link>
-                <span className="text-xs text-gray-500">|</span>
-                <span className="text-xs sm:text-sm text-gray-600">{userEmail}</span>
-                <button
-                  onClick={handleLogout}
-                  className="text-xs sm:text-sm text-red-600 hover:text-red-700 transition-colors"
-                >
-                  Logout
-                </button>
               </>
             ) : (
               <>

@@ -95,7 +95,7 @@ export default function PWAInstall() {
     <>
       {/* Browser Install Prompt (Blue Banner) */}
       {showPrompt && deferredPrompt && (
-        <div className="fixed top-0 left-0 right-0 bg-blue-600 text-white p-3 sm:p-4 shadow-lg z-50 animate-slideDown">
+        <div className="fixed bottom-0 left-0 right-0 bg-blue-600 text-white p-3 sm:p-4 shadow-lg z-50 animate-slideUp">
           <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
             <div>
               <p className="font-semibold text-sm sm:text-base">🎉 Install Ambetter Health App</p>
@@ -121,7 +121,7 @@ export default function PWAInstall() {
 
       {/* Manual Install Instructions (Amber Banner) */}
       {showManualInstall && !deferredPrompt && (
-        <div className="fixed top-0 left-0 right-0 bg-amber-500 text-white p-3 sm:p-4 shadow-lg z-50 animate-slideDown">
+        <div className="fixed bottom-0 left-0 right-0 bg-amber-500 text-white p-3 sm:p-4 shadow-lg z-50 animate-slideUp">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-start justify-between gap-2">
               <div className="flex-1 min-w-0">
