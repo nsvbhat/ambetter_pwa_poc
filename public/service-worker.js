@@ -1,9 +1,6 @@
 const CACHE_NAME = 'ambetter-pwa-v1';
 const ASSETS_TO_CACHE = [
   '/',
-  '/offline.html',
-  '/icon-192.png',
-  '/icon-512.png',
 ];
 
 // Install event
@@ -12,9 +9,7 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       console.log('Caching essential assets');
-      return cache.addAll(ASSETS_TO_CACHE).catch((err) => {
-        console.log('Cache addAll error:', err);
-      });
+      return Promise.resolve(); // Skip caching for now, do it on demand
     })
   );
   self.skipWaiting();

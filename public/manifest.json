@@ -27,10 +27,5 @@
       "type": "image/png",
       "purpose": "any"
     }
-  ],
-  "permissions": [
-    "camera",
-    "microphone",
-    "geolocation"
   ]
 }
