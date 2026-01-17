@@ -12,6 +12,21 @@ export default function PWAInit() {
           console.log('✅ Service Worker registered:', registration);
           console.log('Service Worker scope:', registration.scope);
           
+          // Listen for new service worker ready
+          registration.addEventListener('updatefound', () => {
+            const newWorker = registration.installing;
+            
+            newWorker?.addEventListener('statechange', () => {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // New service worker is ready, reload the page silently
+                console.log('🔄 New version detected, reloading...');
+                setTimeout(() => {
+                  window.location.reload();
+                }, 2000); // Wait 2 seconds before reload
+              }
+            });
+          });
+          
           // Request notification permission for better engagement
           if ('Notification' in window && Notification.permission === 'default') {
             console.log('Requesting notification permission...');
