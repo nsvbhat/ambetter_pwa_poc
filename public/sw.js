@@ -1,5 +1,5 @@
 // Service Worker with Version Control and Cache Busting
-let CACHE_VERSION = 'ambetter-v1.0.0';
+let CACHE_VERSION = 'ambetter-v1.0.2';
 
 // Fetch version from API on install
 const fetchCacheVersion = () => {
