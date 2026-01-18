@@ -1,4 +1,5 @@
 {
+  "lang": "en-US",
   "name": "Ambetter Health PWA",
   "short_name": "Ambetter",
   "description": "Your health, simplified. Access health information 24/7.",
@@ -6,7 +7,7 @@
   "start_url": "/",
   "scope": "/",
   "display": "fullscreen",
-  "display_override": ["fullscreen", "standalone"],
+  "display_override": ["fullscreen", "window-controls-overlay", "standalone"],
   "orientation": "portrait-primary",
   "theme_color": "#ec4899",
   "background_color": "#ffffff",
@@ -19,6 +20,27 @@
       "type": "image/png",
       "form_factor": "narrow"
     }
+  ],
+  "file_handlers": [
+    {
+      "action": "/",
+      "accept": {
+        "application/pdf": [".pdf"],
+        "application/msword": [".doc"],
+        "application/vnd.openxmlformats-officedocument.wordprocessingml.document": [".docx"],
+        "application/vnd.ms-excel": [".xls"],
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": [".xlsx"],
+        "text/plain": [".txt"],
+        "image/jpeg": [".jpg", ".jpeg"],
+        "image/png": [".png"]
+      },
+      "launch_type": "single-client"
+    }
+  ],
+  "permissions": [
+    "camera",
+    "microphone",
+    "geolocation"
   ],
   "icons": [
     {
