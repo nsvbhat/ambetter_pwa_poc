@@ -94,7 +94,7 @@ export default function PWAInit() {
             reg.update().catch((err) => {
               console.error('❌ Update check failed:', err);
             });
-          }, 5000);
+          }, 60000);
           
           // Listen for updates - reload immediately when new version ready
           reg.addEventListener('updatefound', () => {

@@ -23,9 +23,12 @@ export default function PWAInstall() {
   useEffect(() => {
     console.log('📱 PWAInstall component mounted');
 
-    // Check if app is already installed
-    if (window.matchMedia('(display-mode: standalone)').matches) {
-      console.log('✅ App is already installed (standalone mode)');
+    // Check if app is already installed (standalone mode or TWA)
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
+    const isTWA = navigator.userAgent.includes('wv'); // TWA detection
+    
+    if (isStandalone || isTWA) {
+      console.log('✅ App is already installed (standalone or TWA mode)');
       setIsInstalled(true);
       setIsLoading(false);
       return;
@@ -44,7 +47,7 @@ export default function PWAInstall() {
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt as EventListener);
     console.log('✓ beforeinstallprompt listener attached');
 
-    // Show manual install instructions after 4 seconds if beforeinstallprompt hasn't fired
+    // Show manual install instructions after 10 seconds if beforeinstallprompt hasn't fired
     const timer = setTimeout(() => {
       console.log('⏱️ 10 seconds elapsed without beforeinstallprompt event');
       if (!deferredPrompt && !isInstalled) {
