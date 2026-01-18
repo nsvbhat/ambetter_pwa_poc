@@ -26,7 +26,7 @@ export default function PWAInit() {
           }, 10000);
           
           // Register periodic sync for background updates (every 12 hours)
-          if ('periodicSync' in reg) {
+          if ('periodicSync' in reg && 'PeriodicSyncManager' in window) {
             (reg.periodicSync as any).register('update-check', {
               minInterval: 12 * 60 * 60 * 1000 // 12 hours
             }).then(() => {
@@ -36,13 +36,22 @@ export default function PWAInit() {
             });
           }
           
-          // Register background sync for data syncing
-          if ('sync' in reg) {
-            (reg.sync as any).register('sync-health-data').then(() => {
-              console.log('✅ Background sync registered');
-            }).catch((err: any) => {
-              console.log('⚠️ Background sync registration failed:', err);
-            });
+          // Register background sync for data syncing when connectivity is restored
+          if ('sync' in reg && 'SyncManager' in window) {
+            // Trigger sync immediately and on reconnection
+            const registerSync = () => {
+              (reg.sync as any).register('sync-health-data').then(() => {
+                console.log('✅ Background sync registered');
+              }).catch((err: any) => {
+                console.log('⚠️ Background sync registration failed:', err);
+              });
+            };
+            
+            // Register on app load
+            registerSync();
+            
+            // Re-register when coming back online
+            window.addEventListener('online', registerSync);
           }
           
           // Request push notification permission and register
