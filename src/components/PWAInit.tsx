@@ -19,7 +19,15 @@ export default function PWAInit() {
         .then((reg: ExtendedServiceWorkerRegistration) => {
           console.log('✅ SW registered');
           
-          // Check for updates every 10 seconds
+          // CRITICAL: Check for updates immediately on app load
+          // This ensures browser detects new SW right away, even if cached
+          reg.update().then(() => {
+            console.log('🔄 Initial update check complete');
+          }).catch((err: any) => {
+            console.log('⚠️ Initial update check failed:', err);
+          });
+          
+          // Then check for updates every 10 seconds
           setInterval(() => {
             console.log('🔄 Checking for SW update...');
             reg.update();
