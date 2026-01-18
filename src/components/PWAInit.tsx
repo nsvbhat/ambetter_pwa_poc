@@ -2,12 +2,21 @@
 
 import { useEffect } from 'react';
 
+interface ExtendedServiceWorkerRegistration extends ServiceWorkerRegistration {
+  sync?: {
+    register: (tag: string) => Promise<void>;
+  };
+  periodicSync?: {
+    register: (tag: string, options: { minInterval: number }) => Promise<void>;
+  };
+}
+
 export default function PWAInit() {
   useEffect(() => {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker
         .register('/sw.js')
-        .then((reg) => {
+        .then((reg: ExtendedServiceWorkerRegistration) => {
           console.log('✅ SW registered');
           
           // Check for updates every 10 seconds
@@ -15,6 +24,43 @@ export default function PWAInit() {
             console.log('🔄 Checking for SW update...');
             reg.update();
           }, 10000);
+          
+          // Register periodic sync for background updates (every 12 hours)
+          if ('periodicSync' in reg) {
+            (reg.periodicSync as any).register('update-check', {
+              minInterval: 12 * 60 * 60 * 1000 // 12 hours
+            }).then(() => {
+              console.log('✅ Periodic sync registered');
+            }).catch((err: any) => {
+              console.log('⚠️ Periodic sync registration failed:', err);
+            });
+          }
+          
+          // Register background sync for data syncing
+          if ('sync' in reg) {
+            (reg.sync as any).register('sync-health-data').then(() => {
+              console.log('✅ Background sync registered');
+            }).catch((err: any) => {
+              console.log('⚠️ Background sync registration failed:', err);
+            });
+          }
+          
+          // Request push notification permission and register
+          if ('Notification' in window && 'pushManager' in reg) {
+            Notification.requestPermission().then((permission) => {
+              if (permission === 'granted') {
+                reg.pushManager.subscribe({
+                  userVisibleOnly: true
+                }).then((subscription) => {
+                  console.log('✅ Push notifications enabled');
+                }).catch((err) => {
+                  console.log('⚠️ Push subscription failed:', err);
+                });
+              } else {
+                console.log('⚠️ Push notification permission denied');
+              }
+            });
+          }
           
           // Listen for updates
           reg.addEventListener('updatefound', () => {
