@@ -23,8 +23,10 @@ export default function PWAInstall() {
   useEffect(() => {
     console.log('📱 PWAInstall component mounted');
 
-    // Check if app is already installed (standalone mode or TWA)
+    // Check if app is already installed (standalone mode, fullscreen, or TWA)
     const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
+    const isFullscreen = window.matchMedia('(display-mode: fullscreen)').matches;
+    
     // Better TWA detection - PWABuilder wraps apps with WebView indicators
     const isTWA = navigator.userAgent.includes('wv') || 
                   navigator.userAgent.includes('Trusted Web Activity') ||
@@ -33,11 +35,12 @@ export default function PWAInstall() {
     
     console.log('🔍 Install status check:');
     console.log('  - Standalone mode:', isStandalone);
+    console.log('  - Fullscreen mode:', isFullscreen);
     console.log('  - TWA detected:', isTWA);
     console.log('  - User Agent:', navigator.userAgent);
     
-    if (isStandalone || isTWA) {
-      console.log('✅ App is already installed (standalone or TWA mode) - hiding banners');
+    if (isStandalone || isFullscreen || isTWA) {
+      console.log('✅ App is already installed (standalone, fullscreen, or TWA mode) - hiding banners');
       setIsInstalled(true);
       setIsLoading(false);
       return;
