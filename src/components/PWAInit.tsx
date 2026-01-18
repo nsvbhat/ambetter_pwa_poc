@@ -27,12 +27,21 @@ export default function PWAInit() {
           
           // Register periodic sync for background updates (every 12 hours)
           if ('periodicSync' in reg && 'PeriodicSyncManager' in window) {
-            (reg.periodicSync as any).register('update-check', {
-              minInterval: 12 * 60 * 60 * 1000 // 12 hours
-            }).then(() => {
-              console.log('✅ Periodic sync registered');
+            // Check if permission was properly granted
+            navigator.permissions.query({
+              name: 'periodic-background-sync' as any
+            }).then((syncPermission: any) => {
+              if (syncPermission.state === 'granted') {
+                (reg.periodicSync as any).register('update-check', {
+                  minInterval: 12 * 60 * 60 * 1000 // 12 hours
+                }).then(() => {
+                  console.log('✅ Periodic sync registered');
+                }).catch((err: any) => {
+                  console.log('⚠️ Periodic sync registration failed:', err);
+                });
+              }
             }).catch((err: any) => {
-              console.log('⚠️ Periodic sync registration failed:', err);
+              console.log('⚠️ Periodic sync permission query failed:', err);
             });
           }
           

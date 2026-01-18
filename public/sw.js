@@ -15,16 +15,20 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(fetch(event.request));
 });
 
-// Periodic Sync - Background update checks
+// Periodic Sync - Background update checks (at regular intervals)
 self.addEventListener('periodicsync', (event) => {
   console.log('🔄 Periodic Sync triggered:', event.tag);
+  
+  // Check for correct tag on the periodicsync event
   if (event.tag === 'update-check') {
+    // Execute the desired behavior with waitUntil()
     event.waitUntil(
       fetch('/').then((response) => {
         console.log('✅ Periodic sync: App state checked');
         return response;
       }).catch((err) => {
         console.log('❌ Periodic sync failed:', err);
+        throw err; // Retry later if failed
       })
     );
   }
@@ -33,7 +37,10 @@ self.addEventListener('periodicsync', (event) => {
 // Background Sync - Retry failed requests when connection restored
 self.addEventListener('sync', (event) => {
   console.log('🔄 Background Sync triggered:', event.tag);
+  
+  // Check for correct tag on the sync event
   if (event.tag === 'sync-health-data') {
+    // Execute the desired behavior with waitUntil()
     event.waitUntil(
       fetch('/', { method: 'POST', body: JSON.stringify({ action: 'sync' }) })
         .then((response) => {
@@ -42,7 +49,7 @@ self.addEventListener('sync', (event) => {
         })
         .catch((err) => {
           console.log('❌ Background sync failed:', err);
-          throw err; // Retry later
+          throw err; // Retry later if failed
         })
     );
   }
@@ -50,20 +57,31 @@ self.addEventListener('sync', (event) => {
 
 // Push Notifications - Handle incoming push events
 self.addEventListener('push', (event) => {
-  console.log('📢 Push notification received:', event.data?.text());
-  const notificationData = event.data ? event.data.json() : {};
-  const title = notificationData.title || 'Ambetter Health';
-  const options = {
-    body: notificationData.body || 'You have a new notification',
+  console.log('📢 Push notification received');
+  
+  let notificationData = {
+    title: 'Ambetter Health',
+    body: 'You have a new notification',
     icon: '/ambetter-logo-192.png',
-    badge: '/ambetter-logo-192.png',
-    tag: notificationData.tag || 'ambetter-notification',
-    requireInteraction: false,
-    ...notificationData
+    badge: '/ambetter-logo-192.png'
   };
   
+  // Try to parse JSON from push event
+  try {
+    if (event.data) {
+      notificationData = { ...notificationData, ...event.data.json() };
+    }
+  } catch (e) {
+    console.log('⚠️ Failed to parse push data:', e);
+  }
+  
   event.waitUntil(
-    self.registration.showNotification(title, options)
+    self.registration.showNotification(notificationData.title, {
+      body: notificationData.body,
+      icon: notificationData.icon,
+      badge: notificationData.badge,
+      tag: notificationData.tag || 'ambetter-notification'
+    })
   );
 });
 
