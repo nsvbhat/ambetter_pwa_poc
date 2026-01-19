@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-
+// Scenario 2: New fields can be added on the server
 export async function GET() {
   return NextResponse.json({
     agents: [
