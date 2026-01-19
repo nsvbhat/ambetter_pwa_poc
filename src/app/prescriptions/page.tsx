@@ -4,7 +4,8 @@ import { useEffect, useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
-import { downloadFile, captureFromCamera, getFileExtension } from '@/lib/pwa-utils';
+import CameraModal from '@/components/CameraModal';
+import { downloadFile, getFileExtension } from '@/lib/pwa-utils';
 
 export default function PrescriptionsPage() {
   const router = useRouter();
@@ -12,6 +13,7 @@ export default function PrescriptionsPage() {
   const [uploading, setUploading] = useState(false);
   const [uploadedFile, setUploadedFile] = useState<string | null>(null);
   const [cameraSupported, setCameraSupported] = useState(false);
+  const [cameraModalOpen, setCameraModalOpen] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -84,21 +86,24 @@ Please contact your pharmacy to refill.
   };
 
   const handleCameraCapture = async () => {
+    setCameraModalOpen(true);
+  };
+
+  const handleCameraCaptureDone = async (blob: Blob) => {
     setUploading(true);
     try {
-      console.log('📸 Opening camera...');
-      const blob = await captureFromCamera();
+      // Simulate upload (in real app, send to server)
+      console.log('📤 Uploading camera photo:', blob.size, 'bytes');
       
-      if (blob) {
-        setUploadedFile(`Camera-Capture-${Date.now()}.jpg (${(blob.size / 1024).toFixed(2)} KB)`);
-        console.log('✅ Photo captured and uploaded');
-        alert('✅ Prescription photo captured and uploaded');
-      } else {
-        alert('Failed to capture photo');
-      }
+      // Simulate network delay
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+      
+      setUploadedFile(`Camera-Capture-${Date.now()}.jpg (${(blob.size / 1024).toFixed(2)} KB)`);
+      console.log('✅ Photo uploaded successfully');
+      alert(`✅ Prescription photo captured and uploaded`);
     } catch (error) {
-      console.error('Camera capture failed:', error);
-      alert('Camera not available or permission denied');
+      console.error('Upload failed:', error);
+      alert('Failed to upload photo');
     } finally {
       setUploading(false);
     }
@@ -106,6 +111,11 @@ Please contact your pharmacy to refill.
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <CameraModal
+        isOpen={cameraModalOpen}
+        onClose={() => setCameraModalOpen(false)}
+        onCapture={handleCameraCaptureDone}
+      />
       <Navigation />
 
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">

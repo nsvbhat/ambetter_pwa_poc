@@ -47,6 +47,8 @@ export async function downloadFile(
 
 /**
  * Capture image from camera
+ * NOTE: Use CameraModal component in UI for user interaction
+ * This is kept for backwards compatibility but not recommended
  */
 export async function captureFromCamera(): Promise<Blob | null> {
   try {
