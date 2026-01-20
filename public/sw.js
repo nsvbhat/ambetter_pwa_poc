@@ -1,4 +1,4 @@
-// Service Worker for Brillio PWA
+// Service Worker for Brillio Mobile Chassis
 const CACHE_VERSION = 'Brillio-v1.0.0';
 const STATIC_ASSETS = [
   '/',

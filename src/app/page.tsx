@@ -19,7 +19,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#1a1a2e]">
       <Navigation />
-
+<br></br>
       {/* Version Badge */}
       <div className="fixed top-16 right-4 bg-[#00d4ff] text-[#1a1a2e] text-xs sm:text-sm px-3 py-1.5 rounded-full font-semibold shadow-lg z-40">
         {APP_VERSION.split('-')[1]}
@@ -106,7 +106,7 @@ export default function HomePage() {
         {/* PWA Benefits Section */}
         <div className="mb-12 sm:mb-16 lg:mb-20">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 sm:mb-8 lg:mb-10 text-center">
-            Why Brillio PWA?
+            Why Brillio Mobile Chassis?
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {/* Benefit 1 */}

@@ -1,4 +1,4 @@
-# 📖 Brillio PWA - Complete Documentation Index
+# 📖 Brillio Mobile Chassis - Complete Documentation Index
 
 Welcome! This is your complete guide to the Brillio Health PWA project. Below is everything you need to know to understand, develop, test, and deploy this application.
 
