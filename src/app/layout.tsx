@@ -27,7 +27,7 @@ export const viewport: Viewport = {
   minimumScale: 1,
   viewportFit: "cover",
   colorScheme: "dark",
-  themeColor: "#00d4ff",
+  themeColor: "#8b5cf6",
 };
 
 export default function RootLayout({
@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="theme-color" content="#00d4ff" />
+        <meta name="theme-color" content="#8b5cf6" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />

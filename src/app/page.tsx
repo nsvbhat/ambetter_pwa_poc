@@ -17,7 +17,7 @@ export default function HomePage() {
   }, [router]);
 
   return (
-    <div className="min-h-screen bg-[#1a1a2e]">
+    <div className="min-h-screen bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700">
       <Navigation />
 <br></br>
       {/* Version Badge */}
@@ -41,7 +41,7 @@ export default function HomePage() {
             Brillio Health
           </h1>
           <p className="text-gray-300 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto mb-6 sm:mb-8">
-            Your health, simplified. Access your health information 24/7 with our mobile-first PWA.
+            Your health, simplified. Access your health information 24/7 with our Mobile Chassis.
           </p>
           <Link
             href="/login"
