@@ -143,7 +143,7 @@ export default function FindCarePage() {
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <Link
           href="/dashboard"
-          className="text-pink-600 hover:text-pink-800 mb-6 inline-block text-xs sm:text-sm"
+          className="text-[#00d4ff] hover:text-pink-800 mb-6 inline-block text-xs sm:text-sm"
         >
           ← Back to Dashboard
         </Link>
@@ -183,7 +183,7 @@ export default function FindCarePage() {
                   onClick={() => setSelectedSpecialty(specialty)}
                   className={`px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-all ${
                     selectedSpecialty === specialty
-                      ? 'bg-pink-600 text-white'
+                      ? 'bg-[#00d4ff] text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
                   }`}
                 >
@@ -206,7 +206,7 @@ export default function FindCarePage() {
             filteredProviders.map((provider) => (
               <div
                 key={provider.id}
-                className="bg-white rounded-lg shadow hover:shadow-lg transition-shadow p-4 sm:p-6 border-l-4 border-pink-600"
+                className="bg-white rounded-lg shadow hover:shadow-lg transition-shadow p-4 sm:p-6 border-l-4 border-[#00d4ff]"
               >
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                   {/* Provider Info */}
@@ -225,7 +225,7 @@ export default function FindCarePage() {
                       )}
                     </div>
 
-                    <p className="text-xs sm:text-sm text-pink-600 font-medium mb-2">{provider.specialty}</p>
+                    <p className="text-xs sm:text-sm text-[#00d4ff] font-medium mb-2">{provider.specialty}</p>
 
                     <div className="space-y-2 text-xs sm:text-sm text-gray-600 mb-3">
                       <div className="flex items-start gap-2">
@@ -260,7 +260,7 @@ export default function FindCarePage() {
 
                   {/* Action Buttons */}
                   <div className="flex flex-col gap-2 sm:gap-3 w-full sm:w-auto">
-                    <button className="bg-pink-600 hover:bg-pink-700 text-white px-4 sm:px-6 py-2 rounded-lg font-medium text-xs sm:text-sm transition-colors whitespace-nowrap">
+                    <button className="bg-[#00d4ff] hover:bg-pink-700 text-white px-4 sm:px-6 py-2 rounded-lg font-medium text-xs sm:text-sm transition-colors whitespace-nowrap">
                       Schedule Appointment
                     </button>
                     <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 sm:px-6 py-2 rounded-lg font-medium text-xs sm:text-sm transition-colors whitespace-nowrap">

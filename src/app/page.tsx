@@ -17,11 +17,11 @@ export default function HomePage() {
   }, [router]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 to-pink-100">
+    <div className="min-h-screen bg-[#1a1a2e]">
       <Navigation />
 
       {/* Version Badge */}
-      <div className="fixed top-16 right-4 bg-pink-600 text-white text-xs sm:text-sm px-3 py-1.5 rounded-full font-semibold shadow-lg z-40">
+      <div className="fixed top-16 right-4 bg-[#00d4ff] text-[#1a1a2e] text-xs sm:text-sm px-3 py-1.5 rounded-full font-semibold shadow-lg z-40">
         {APP_VERSION.split('-')[1]}
       </div>
 
@@ -37,15 +37,15 @@ export default function HomePage() {
               />
             </div>
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-pink-900 mb-3 sm:mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#00d4ff] mb-3 sm:mb-4">
             Brillio Health
           </h1>
-          <p className="text-pink-700 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto mb-6 sm:mb-8">
+          <p className="text-gray-300 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto mb-6 sm:mb-8">
             Your health, simplified. Access your health information 24/7 with our mobile-first PWA.
           </p>
           <Link
             href="/login"
-            className="inline-block bg-pink-600 hover:bg-pink-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold transition-colors text-xs sm:text-sm"
+            className="inline-block bg-[#00d4ff] hover:bg-[#0099cc] text-[#1a1a2e] px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold transition-colors text-xs sm:text-sm"
           >
             Sign In to Your Account
           </Link>
@@ -110,23 +110,23 @@ export default function HomePage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {/* Benefit 1 */}
-            <div className="bg-gradient-to-br from-pink-50 to-pink-100 p-4 sm:p-6 rounded-lg border border-pink-200">
+            <div className="bg-gradient-to-br from-[#0d1f2d] to-[#1a2a3a] p-4 sm:p-6 rounded-lg border border-[#00d4ff]/30">
               <div className="text-2xl mb-3">📱</div>
-              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
+              <h3 className="text-base sm:text-lg font-semibold text-white mb-2">
                 Install on Home Screen
               </h3>
-              <p className="text-gray-700 text-xs sm:text-sm">
+              <p className="text-gray-300 text-xs sm:text-sm">
                 One tap install. No app store needed.
               </p>
             </div>
 
             {/* Benefit 2 */}
-            <div className="bg-gradient-to-br from-green-50 to-green-100 p-4 sm:p-6 rounded-lg border border-green-200">
+            <div className="bg-gradient-to-br from-[#0d2a1f] to-[#1a3a2a] p-4 sm:p-6 rounded-lg border border-[#00c9a7]/30">
               <div className="text-2xl mb-3">⚡</div>
-              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
+              <h3 className="text-base sm:text-lg font-semibold text-white mb-2">
                 Lightning Fast
               </h3>
-              <p className="text-gray-700 text-xs sm:text-sm">
+              <p className="text-gray-300 text-xs sm:text-sm">
                 Instant loading. Works offline too.
               </p>
             </div>
@@ -154,23 +154,23 @@ export default function HomePage() {
             </div>
 
             {/* Benefit 5 */}
-            <div className="bg-gradient-to-br from-pink-50 to-pink-100 p-4 sm:p-6 rounded-lg border border-pink-200">
+            <div className="bg-gradient-to-br from-[#0d1f2d] to-[#1a2a3a] p-4 sm:p-6 rounded-lg border border-[#00d4ff]/30">
               <div className="text-2xl mb-3">🌍</div>
-              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
+              <h3 className="text-base sm:text-lg font-semibold text-white mb-2">
                 Works Everywhere
               </h3>
-              <p className="text-gray-700 text-xs sm:text-sm">
+              <p className="text-gray-300 text-xs sm:text-sm">
                 iOS, Android, or web browser.
               </p>
             </div>
 
             {/* Benefit 6 */}
-            <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 p-4 sm:p-6 rounded-lg border border-yellow-200">
+            <div className="bg-gradient-to-br from-[#1f2d0d] to-[#2a3a1a] p-4 sm:p-6 rounded-lg border border-[#ff6b3a]/30">
               <div className="text-2xl mb-3">💰</div>
-              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
+              <h3 className="text-base sm:text-lg font-semibold text-white mb-2">
                 Free to Use
               </h3>
-              <p className="text-gray-700 text-xs sm:text-sm">
+              <p className="text-gray-300 text-xs sm:text-sm">
                 No subscription or download fees.
               </p>
             </div>
@@ -178,23 +178,23 @@ export default function HomePage() {
         </div>
 
         {/* Demo Section */}
-        <div className="bg-white rounded-lg shadow-lg p-6 sm:p-8 lg:p-12 border-l-4 border-pink-600">
+        <div className="bg-[#252545] rounded-lg shadow-lg p-6 sm:p-8 lg:p-12 border-l-4 border-[#00d4ff]">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
             <div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">
                 Demo Login Info
               </h3>
-              <p className="text-gray-700 text-xs sm:text-sm mb-3">
+              <p className="text-gray-300 text-xs sm:text-sm mb-3">
                 Try the app with demo credentials:
               </p>
-              <div className="bg-pink-50 p-3 sm:p-4 rounded-lg border border-pink-200">
-                <p className="text-xs sm:text-sm text-pink-700 mb-2">
+              <div className="bg-[#0d1f2d] p-3 sm:p-4 rounded-lg border border-[#00d4ff]/30">
+                <p className="text-xs sm:text-sm text-[#00d4ff] mb-2">
                   <strong>Email:</strong> demo@Brillio.com
                 </p>
-                <p className="text-xs sm:text-sm text-pink-700 mb-2">
+                <p className="text-xs sm:text-sm text-[#00d4ff] mb-2">
                   <strong>Password:</strong> Any password (min 6 chars)
                 </p>
-                <p className="text-xs text-pink-600">
+                <p className="text-xs text-[#00c9a7]">
                   This is a demo app - just for demonstration purposes.
                 </p>
               </div>
@@ -202,7 +202,7 @@ export default function HomePage() {
             <div className="flex items-center justify-center">
               <Link
                 href="/login"
-                className="w-full bg-pink-600 hover:bg-pink-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-colors text-center text-xs sm:text-sm"
+                className="w-full bg-[#00d4ff] hover:bg-[#0099cc] text-[#1a1a2e] px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-colors text-center text-xs sm:text-sm"
               >
                 Start Exploring →
               </Link>
@@ -212,19 +212,19 @@ export default function HomePage() {
 
         {/* Footer CTA */}
         <div className="mt-12 sm:mt-16 lg:mt-20 text-center">
-          <p className="text-pink-700 text-xs sm:text-sm mb-4">
+          <p className="text-gray-300 text-xs sm:text-sm mb-4">
             Ready to experience Brillio Health?
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Link
               href="/login"
-              className="bg-pink-600 hover:bg-pink-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold transition-colors text-xs sm:text-sm"
+              className="bg-[#00d4ff] hover:bg-[#0099cc] text-[#1a1a2e] px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold transition-colors text-xs sm:text-sm"
             >
               Sign In
             </Link>
             <a
               href="#"
-              className="border-2 border-pink-600 text-pink-600 hover:bg-pink-50 px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold transition-colors text-xs sm:text-sm"
+              className="border-2 border-[#00d4ff] text-[#00d4ff] hover:bg-[#0d1f2d] px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-semibold transition-colors text-xs sm:text-sm"
             >
               Learn More
             </a>

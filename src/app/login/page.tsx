@@ -107,7 +107,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-600 to-pink-700 flex items-center justify-center px-4 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-[#00d4ff] to-[#0099cc] flex items-center justify-center px-4 py-8">
       <Link 
         href="/"
         className="fixed top-4 left-4 bg-white/20 hover:bg-white/30 text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg font-medium transition-all text-xs sm:text-sm flex items-center gap-2 backdrop-blur-sm"
@@ -122,15 +122,15 @@ export default function LoginPage() {
             <img src="/Brillio-logo-new.png" alt="Brillio Health" className="h-16 w-auto" />
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">Brillio Health</h1>
-          <p className="text-pink-100 text-sm sm:text-base">Affordable Health Coverage</p>
+          <p className="text-gray-200 text-sm sm:text-base">Affordable Health Coverage</p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-xl p-6 sm:p-8">
-          <h2 className="text-2xl font-bold text-pink-600 mb-6">Sign In</h2>
+        <div className="bg-[#252545] rounded-lg shadow-xl p-6 sm:p-8">
+          <h2 className="text-2xl font-bold text-[#00d4ff] mb-6">Sign In</h2>
 
           {error && (
-            <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg">
-              <p className="text-red-700 text-xs sm:text-sm">{error}</p>
+            <div className="mb-4 p-4 bg-red-500/20 border border-red-500/50 rounded-lg">
+              <p className="text-red-300 text-xs sm:text-sm">{error}</p>
             </div>
           )}
 
@@ -250,32 +250,32 @@ export default function LoginPage() {
 
           <form onSubmit={handleLogin} className="space-y-4 sm:space-y-5">
             <div>
-              <label className="block text-xs sm:text-sm font-medium text-pink-600 mb-1">Email Address</label>
+              <label className="block text-xs sm:text-sm font-medium text-[#00d4ff] mb-1">Email Address</label>
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@example.com"
-                className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-pink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500 text-xs sm:text-sm bg-white text-gray-900 placeholder-gray-500"
+                className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-[#00d4ff]/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00d4ff] focus:border-[#00d4ff] text-xs sm:text-sm bg-[#1a1a2e] text-white placeholder-gray-500"
                 disabled={loading}
               />
             </div>
 
             <div>
-              <label className="block text-xs sm:text-sm font-medium text-pink-600 mb-1">Password</label>
+              <label className="block text-xs sm:text-sm font-medium text-[#00d4ff] mb-1">Password</label>
               <div className="relative">
                 <input
                   type={showPassword ? 'text' : 'password'}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
-                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-pink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500 text-xs sm:text-sm bg-white text-gray-900 placeholder-gray-500"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border-2 border-[#00d4ff]/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00d4ff] focus:border-[#00d4ff] text-xs sm:text-sm bg-[#1a1a2e] text-white placeholder-gray-500"
                   disabled={loading}
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-300"
                 >
                   {showPassword ? '👁️' : '👁️‍🗨️'}
                 </button>
@@ -283,31 +283,31 @@ export default function LoginPage() {
             </div>
 
             <div className="flex items-center">
-              <input type="checkbox" id="remember" className="w-4 h-4 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500" />
-              <label htmlFor="remember" className="ml-2 text-xs sm:text-sm text-gray-600">Remember me</label>
+              <input type="checkbox" id="remember" className="w-4 h-4 border border-[#00d4ff]/50 rounded focus:ring-2 focus:ring-[#00d4ff] bg-[#1a1a2e]" />
+              <label htmlFor="remember" className="ml-2 text-xs sm:text-sm text-gray-400">Remember me</label>
             </div>
 
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-pink-600 hover:bg-pink-700 disabled:bg-pink-300 text-white font-semibold py-2 sm:py-3 rounded-lg transition-colors text-xs sm:text-sm"
+              className="w-full bg-[#00d4ff] hover:bg-[#0099cc] disabled:bg-[#003d66] text-[#1a1a2e] font-semibold py-2 sm:py-3 rounded-lg transition-colors text-xs sm:text-sm"
             >
               {loading ? 'Signing in...' : 'Sign In'}
             </button>
           </form>
 
-          <div className="mt-6 p-4 bg-pink-50 border border-pink-200 rounded-lg">
-            <p className="text-xs sm:text-sm text-pink-600 font-medium mb-2">Demo Login:</p>
-            <p className="text-xs text-pink-600">Any email + password (min 6 chars)</p>
+          <div className="mt-6 p-4 bg-[#1a1a2e] border border-[#00d4ff]/30 rounded-lg">
+            <p className="text-xs sm:text-sm text-[#00d4ff] font-medium mb-2">Demo Login:</p>
+            <p className="text-xs text-gray-300">Any email + password (min 6 chars)</p>
           </div>
 
           <div className="mt-6 text-center space-y-2">
             <div>
-              <a href="#" className="text-pink-600 hover:text-pink-700 text-xs sm:text-sm font-medium">Forgot password?</a>
+              <a href="#" className="text-[#00d4ff] hover:text-[#00c9a7] text-xs sm:text-sm font-medium">Forgot password?</a>
             </div>
-            <div className="text-xs sm:text-sm text-gray-600">
+            <div className="text-xs sm:text-sm text-gray-400">
               Don't have an account?{' '}
-              <a href="#" className="text-pink-600 hover:text-pink-700 font-medium">Sign up</a>
+              <a href="#" className="text-[#00d4ff] hover:text-[#00c9a7] font-medium">Sign up</a>
             </div>
           </div>
         </div>

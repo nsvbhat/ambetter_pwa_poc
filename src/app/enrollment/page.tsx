@@ -88,7 +88,7 @@ export default function EnrollmentPage() {
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <Link
           href="/dashboard"
-          className="text-pink-600 hover:text-pink-800 mb-6 inline-block text-xs sm:text-sm"
+          className="text-[#00d4ff] hover:text-pink-800 mb-6 inline-block text-xs sm:text-sm"
         >
           ← Back to Dashboard
         </Link>
@@ -123,7 +123,7 @@ export default function EnrollmentPage() {
                           value={option}
                           checked={answers[question.id] === option}
                           onChange={(e) => handleAnswer(question.id, e.target.value)}
-                          className="w-4 h-4 text-pink-600"
+                          className="w-4 h-4 text-[#00d4ff]"
                         />
                         <label
                           htmlFor={`${question.id}-${option}`}
@@ -141,7 +141,7 @@ export default function EnrollmentPage() {
                           id={`${question.id}-${option}`}
                           checked={((answers[question.id] as string[]) || []).includes(option)}
                           onChange={(e) => handleAnswer(question.id, option, true)}
-                          className="w-4 h-4 text-pink-600"
+                          className="w-4 h-4 text-[#00d4ff]"
                         />
                         <label
                           htmlFor={`${question.id}-${option}`}
@@ -159,7 +159,7 @@ export default function EnrollmentPage() {
 
           <button
             onClick={() => setShowAgents(true)}
-            className="mt-6 sm:mt-8 w-full bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 sm:py-3 rounded-lg transition-colors text-xs sm:text-sm"
+            className="mt-6 sm:mt-8 w-full bg-[#00d4ff] hover:bg-pink-700 text-white font-semibold py-2 sm:py-3 rounded-lg transition-colors text-xs sm:text-sm"
           >
             Connect with Licensed Agent
           </button>
@@ -196,7 +196,7 @@ export default function EnrollmentPage() {
                   <div className="space-y-2 mb-4">
                     <div className="text-xs sm:text-sm">
                       <span className="text-gray-600">📞 </span>
-                      <a href={`tel:${agent.phone}`} className="text-pink-600 hover:underline">
+                      <a href={`tel:${agent.phone}`} className="text-[#00d4ff] hover:underline">
                         {agent.phone}
                       </a>
                     </div>
@@ -210,7 +210,7 @@ export default function EnrollmentPage() {
                     </div>
                   </div>
 
-                  <button className="w-full bg-pink-600 hover:bg-pink-700 text-white py-2 rounded font-medium text-xs sm:text-sm transition-colors">
+                  <button className="w-full bg-[#00d4ff] hover:bg-pink-700 text-white py-2 rounded font-medium text-xs sm:text-sm transition-colors">
                     Call Now
                   </button>
                 </div>

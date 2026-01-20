@@ -28,7 +28,7 @@ export default function PaymentsPage() {
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <Link
           href="/dashboard"
-          className="text-pink-600 hover:text-pink-800 mb-6 inline-block text-xs sm:text-sm"
+          className="text-[#00d4ff] hover:text-pink-800 mb-6 inline-block text-xs sm:text-sm"
         >
           ← Back to Dashboard
         </Link>
@@ -75,7 +75,7 @@ export default function PaymentsPage() {
                   <p className="text-xs text-gray-600 mt-1">Checking ending in 4321</p>
                   <p className="text-xs text-gray-500 mt-1">✓ Auto-pay enabled (1st of each month)</p>
                 </div>
-                <button className="text-pink-600 hover:text-pink-700 text-xs sm:text-sm font-medium">
+                <button className="text-[#00d4ff] hover:text-pink-700 text-xs sm:text-sm font-medium">
                   Change
                 </button>
               </div>
@@ -89,7 +89,7 @@ export default function PaymentsPage() {
                   <p className="text-xs text-gray-600 mt-1">Visa ending in 9876</p>
                   <p className="text-xs text-gray-500 mt-1">Expires 12/2027</p>
                 </div>
-                <button className="text-pink-600 hover:text-pink-700 text-xs sm:text-sm font-medium">
+                <button className="text-[#00d4ff] hover:text-pink-700 text-xs sm:text-sm font-medium">
                   Use This
                 </button>
               </div>
@@ -98,7 +98,7 @@ export default function PaymentsPage() {
 
           <button
             onClick={() => setShowPaymentForm(!showPaymentForm)}
-            className="w-full mt-6 bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 sm:py-3 rounded-lg transition-colors text-xs sm:text-sm"
+            className="w-full mt-6 bg-[#00d4ff] hover:bg-pink-700 text-white font-semibold py-2 sm:py-3 rounded-lg transition-colors text-xs sm:text-sm"
           >
             Make One-Time Payment
           </button>
@@ -165,7 +165,7 @@ export default function PaymentsPage() {
               <p className="text-xs text-gray-600">Bank Account ending in 4321</p>
             </div>
             <div className="flex gap-2">
-              <button className="text-pink-600 hover:text-pink-700 text-xs sm:text-sm font-medium">
+              <button className="text-[#00d4ff] hover:text-pink-700 text-xs sm:text-sm font-medium">
                 Modify
               </button>
               <button className="text-red-600 hover:text-red-700 text-xs sm:text-sm font-medium">

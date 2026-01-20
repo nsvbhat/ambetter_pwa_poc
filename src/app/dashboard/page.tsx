@@ -61,7 +61,7 @@ export default function DashboardPage() {
       <Navigation />
 
       {/* Version Badge */}
-      {/* <div className="fixed top-16 right-4 bg-pink-600 text-white text-xs sm:text-sm px-3 py-1.5 rounded-full font-semibold shadow-lg z-40">
+      {/* <div className="fixed top-16 right-4 bg-[#00d4ff] text-white text-xs sm:text-sm px-3 py-1.5 rounded-full font-semibold shadow-lg z-40">
         {APP_VERSION.split('-')[1]}
       </div> */}
 

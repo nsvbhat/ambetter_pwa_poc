@@ -27,7 +27,7 @@ export default function HealthInfoPage() {
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <Link
           href="/dashboard"
-          className="text-pink-600 hover:text-pink-800 mb-6 inline-block text-xs sm:text-sm"
+          className="text-[#00d4ff] hover:text-pink-800 mb-6 inline-block text-xs sm:text-sm"
         >
           ← Back to Dashboard
         </Link>
@@ -62,7 +62,7 @@ export default function HealthInfoPage() {
                 <span className="font-semibold text-gray-900">01/01/2026</span>
               </div>
             </div>
-            <button className="w-full mt-4 bg-pink-600 hover:bg-pink-700 text-white py-2 rounded font-medium text-xs sm:text-sm transition-colors">
+            <button className="w-full mt-4 bg-[#00d4ff] hover:bg-pink-700 text-white py-2 rounded font-medium text-xs sm:text-sm transition-colors">
               Download ID Card
             </button>
           </div>
@@ -87,7 +87,7 @@ export default function HealthInfoPage() {
                 <span className="font-semibold text-gray-900">$40</span>
               </div>
             </div>
-            <button className="w-full mt-4 bg-pink-600 hover:bg-pink-700 text-white py-2 rounded font-medium text-xs sm:text-sm transition-colors">
+            <button className="w-full mt-4 bg-[#00d4ff] hover:bg-pink-700 text-white py-2 rounded font-medium text-xs sm:text-sm transition-colors">
               View Full Details
             </button>
           </div>
@@ -128,7 +128,7 @@ export default function HealthInfoPage() {
               </tbody>
             </table>
           </div>
-          <button className="w-full mt-4 text-pink-600 hover:text-pink-700 font-medium text-xs sm:text-sm">
+          <button className="w-full mt-4 text-[#00d4ff] hover:text-pink-700 font-medium text-xs sm:text-sm">
             View All Claims →
           </button>
         </div>

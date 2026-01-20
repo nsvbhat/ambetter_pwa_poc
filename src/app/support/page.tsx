@@ -148,7 +148,7 @@ export default function SupportPage() {
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <Link
           href="/dashboard"
-          className="text-pink-600 hover:text-pink-800 mb-6 inline-block text-xs sm:text-sm"
+          className="text-[#00d4ff] hover:text-pink-800 mb-6 inline-block text-xs sm:text-sm"
         >
           ← Back to Dashboard
         </Link>
@@ -188,7 +188,7 @@ export default function SupportPage() {
                   onClick={() => setSelectedCategory(category)}
                   className={`px-3 sm:px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-all ${
                     selectedCategory === category
-                      ? 'bg-pink-600 text-white'
+                      ? 'bg-[#00d4ff] text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
                   }`}
                 >
@@ -211,7 +211,7 @@ export default function SupportPage() {
             filteredFAQs.map((faq) => (
               <div
                 key={faq.id}
-                className="bg-white rounded-lg shadow hover:shadow-lg transition-shadow border-l-4 border-pink-600"
+                className="bg-white rounded-lg shadow hover:shadow-lg transition-shadow border-l-4 border-[#00d4ff]"
               >
                 <button
                   onClick={() => setExpandedId(expandedId === faq.id ? null : faq.id)}
@@ -227,7 +227,7 @@ export default function SupportPage() {
                       {faq.question}
                     </h3>
                   </div>
-                  <div className="text-xl text-pink-600 flex-shrink-0 mt-1">
+                  <div className="text-xl text-[#00d4ff] flex-shrink-0 mt-1">
                     {expandedId === faq.id ? '▼' : '▶'}
                   </div>
                 </button>
@@ -263,7 +263,7 @@ export default function SupportPage() {
             <div className="bg-white rounded-lg p-4 sm:p-5">
               <div className="text-2xl mb-2">📞</div>
               <p className="font-semibold text-gray-900 text-sm sm:text-base mb-1">Call Us</p>
-              <p className="text-xs sm:text-sm text-pink-600 font-mono">1-800-Brillio</p>
+              <p className="text-xs sm:text-sm text-[#00d4ff] font-mono">1-800-Brillio</p>
               <p className="text-xs text-gray-600 mt-2">Available 24/7, 7 days a week</p>
             </div>
 
@@ -271,7 +271,7 @@ export default function SupportPage() {
             <div className="bg-white rounded-lg p-4 sm:p-5">
               <div className="text-2xl mb-2">📧</div>
               <p className="font-semibold text-gray-900 text-sm sm:text-base mb-1">Email Us</p>
-              <p className="text-xs sm:text-sm text-pink-600 font-mono">support@Brilliohealth.com</p>
+              <p className="text-xs sm:text-sm text-[#00d4ff] font-mono">support@Brilliohealth.com</p>
               <p className="text-xs text-gray-600 mt-2">We'll respond within 24 hours</p>
             </div>
 
@@ -279,7 +279,7 @@ export default function SupportPage() {
             <div className="bg-white rounded-lg p-4 sm:p-5">
               <div className="text-2xl mb-2">💬</div>
               <p className="font-semibold text-gray-900 text-sm sm:text-base mb-1">Live Chat</p>
-              <button className="text-xs sm:text-sm text-pink-600 font-medium hover:underline">
+              <button className="text-xs sm:text-sm text-[#00d4ff] font-medium hover:underline">
                 Start a conversation
               </button>
               <p className="text-xs text-gray-600 mt-2">Mon-Fri, 8 AM - 8 PM EST</p>
@@ -290,7 +290,7 @@ export default function SupportPage() {
               <div className="text-2xl mb-2">📍</div>
               <p className="font-semibold text-gray-900 text-sm sm:text-base mb-1">Visit Us</p>
               <p className="text-xs sm:text-sm text-gray-700">Find a local Brillio office</p>
-              <button className="text-xs sm:text-sm text-pink-600 font-medium hover:underline mt-2">
+              <button className="text-xs sm:text-sm text-[#00d4ff] font-medium hover:underline mt-2">
                 Find locations
               </button>
             </div>

@@ -118,7 +118,7 @@ Generated: ${new Date().toLocaleString()}
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <Link
           href="/dashboard"
-          className="text-pink-600 hover:text-pink-800 mb-6 inline-block text-xs sm:text-sm"
+          className="text-[#00d4ff] hover:text-pink-800 mb-6 inline-block text-xs sm:text-sm"
         >
           ← Back to Dashboard
         </Link>
@@ -134,7 +134,7 @@ Generated: ${new Date().toLocaleString()}
         <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-8 sm:mb-12">
           {/* Card Front */}
           <div
-            className="bg-gradient-to-r from-pink-600 to-pink-700 p-6 sm:p-8 text-white relative overflow-hidden"
+            className="bg-gradient-to-r from-[#00d4ff] to-[#0099cc] p-6 sm:p-8 text-white relative overflow-hidden"
             style={{
               aspectRatio: '16/9',
               minHeight: '300px',
@@ -190,7 +190,7 @@ Generated: ${new Date().toLocaleString()}
             onClick={() => setShowBack(!showBack)}
             className="w-full p-4 sm:p-6 bg-gradient-to-r from-pink-50 to-pink-100 border-t border-pink-200 hover:bg-gradient-to-r hover:from-pink-100 hover:to-pink-200 transition-all"
           >
-            <p className="text-pink-600 font-semibold text-sm sm:text-base">
+            <p className="text-[#00d4ff] font-semibold text-sm sm:text-base">
               {showBack ? '👈 Show Front' : '👉 Show Important Information'}
             </p>
           </button>
@@ -201,7 +201,7 @@ Generated: ${new Date().toLocaleString()}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {/* Benefits */}
                 <div>
-                  <h3 className="font-bold text-gray-900 text-sm sm:text-base mb-4 border-b-2 border-pink-600 pb-2">
+                  <h3 className="font-bold text-gray-900 text-sm sm:text-base mb-4 border-b-2 border-[#00d4ff] pb-2">
                     Copayments & Deductibles
                   </h3>
                   <div className="space-y-2 text-xs sm:text-sm">
@@ -222,7 +222,7 @@ Generated: ${new Date().toLocaleString()}
 
                 {/* Coverage */}
                 <div>
-                  <h3 className="font-bold text-gray-900 text-sm sm:text-base mb-4 border-b-2 border-pink-600 pb-2">
+                  <h3 className="font-bold text-gray-900 text-sm sm:text-base mb-4 border-b-2 border-[#00d4ff] pb-2">
                     Coverage Includes
                   </h3>
                   <div className="space-y-2 text-xs sm:text-sm">
@@ -248,7 +248,7 @@ Generated: ${new Date().toLocaleString()}
 
               {/* Important Contacts */}
               <div>
-                <h3 className="font-bold text-gray-900 text-sm sm:text-base mb-4 border-b-2 border-pink-600 pb-2">
+                <h3 className="font-bold text-gray-900 text-sm sm:text-base mb-4 border-b-2 border-[#00d4ff] pb-2">
                   Important Contacts
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
@@ -283,7 +283,7 @@ Generated: ${new Date().toLocaleString()}
           <button
             onClick={handleDownloadPDF}
             disabled={downloadingPDF}
-            className="bg-pink-600 hover:bg-pink-700 disabled:bg-pink-300 text-white font-semibold py-3 sm:py-4 rounded-lg transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
+            className="bg-[#00d4ff] hover:bg-pink-700 disabled:bg-pink-300 text-white font-semibold py-3 sm:py-4 rounded-lg transition-colors flex items-center justify-center gap-2 text-sm sm:text-base"
           >
             {downloadingPDF ? (
               <>

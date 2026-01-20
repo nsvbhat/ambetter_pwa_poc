@@ -111,7 +111,7 @@ Please contact your pharmacy to refill.
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         <Link
           href="/dashboard"
-          className="text-pink-600 hover:text-pink-800 mb-6 inline-block text-xs sm:text-sm"
+          className="text-[#00d4ff] hover:text-pink-800 mb-6 inline-block text-xs sm:text-sm"
         >
           ← Back to Dashboard
         </Link>
@@ -160,7 +160,7 @@ Please contact your pharmacy to refill.
                     </span>
                   </div>
                 </div>
-                <button className="w-full sm:w-auto bg-pink-600 hover:bg-pink-700 text-white px-3 sm:px-4 py-2 rounded font-medium text-xs sm:text-sm transition-colors">
+                <button className="w-full sm:w-auto bg-[#00d4ff] hover:bg-pink-700 text-white px-3 sm:px-4 py-2 rounded font-medium text-xs sm:text-sm transition-colors">
                   Refill Now
                 </button>
               </div>
@@ -181,7 +181,7 @@ Please contact your pharmacy to refill.
                     </span>
                   </div>
                 </div>
-                <button className="w-full sm:w-auto bg-pink-600 hover:bg-pink-700 text-white px-3 sm:px-4 py-2 rounded font-medium text-xs sm:text-sm transition-colors">
+                <button className="w-full sm:w-auto bg-[#00d4ff] hover:bg-pink-700 text-white px-3 sm:px-4 py-2 rounded font-medium text-xs sm:text-sm transition-colors">
                   Refill Now
                 </button>
               </div>
@@ -223,7 +223,7 @@ Please contact your pharmacy to refill.
               placeholder="Enter your ZIP code"
               className="flex-1 px-3 sm:px-4 py-2 border-2 border-pink-300 rounded-lg text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500 bg-white text-gray-900 placeholder-gray-600"
             />
-            <button className="bg-pink-600 hover:bg-pink-700 text-white px-4 sm:px-6 py-2 rounded-lg font-medium text-xs sm:text-sm transition-colors">
+            <button className="bg-[#00d4ff] hover:bg-pink-700 text-white px-4 sm:px-6 py-2 rounded-lg font-medium text-xs sm:text-sm transition-colors">
               Search
             </button>
           </div>
