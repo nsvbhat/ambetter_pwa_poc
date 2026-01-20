@@ -19,11 +19,10 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-[#7f5bff]">
       <Navigation />
-      <br></br>
       {/* Version Badge */}
-      <div className="fixed top-16 right-4 bg-white text-[#7f5bff] text-xs sm:text-sm px-3 py-1.5 rounded-full font-semibold shadow-lg z-40">
+      {/* <div className="fixed top-16 right-4 bg-white text-[#7f5bff] text-xs sm:text-sm px-3 py-1.5 rounded-full font-semibold shadow-lg z-40">
         {APP_VERSION.split('-')[1]}
-      </div>
+      </div> */}
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         {/* Hero Section */}

@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
+import { APP_VERSION } from '@/lib/version';
 
 export default function Navigation() {
   const router = useRouter();
@@ -82,6 +83,10 @@ export default function Navigation() {
               </>
             ) : (
               <>
+                    {/* Version Badge */}
+      <div className="fixed top-20 right-4 bg-white text-[#7f5bff] text-xs sm:text-sm px-3 py-1.5 rounded-full font-semibold shadow-lg z-40">
+        {APP_VERSION.split('-')[1]}
+      </div>
                 {/* <Link
                   href="/"
                   className="text-xs sm:text-sm text-gray-300 hover:text-[#00d4ff] transition-colors"
