@@ -7,13 +7,13 @@ import PWAInit from "@/components/PWAInit";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ambetter Health - PWA Demo",
+  title: "Brillio Health - PWA Demo",
   description: "Progressive Web App showcasing dynamic content updates without marketplace redeployment",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "Ambetter Health",
+    title: "Brillio Health",
   },
   formatDetection: {
     telephone: false,
@@ -26,8 +26,8 @@ export const viewport: Viewport = {
   maximumScale: 1,
   minimumScale: 1,
   viewportFit: "cover",
-  colorScheme: "light",
-  themeColor: "#ec4899",
+  colorScheme: "dark",
+  themeColor: "#00d4ff",
 };
 
 export default function RootLayout({
@@ -38,12 +38,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="theme-color" content="#ec4899" />
+        <meta name="theme-color" content="#00d4ff" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="Ambetter" />
-        <link rel="apple-touch-icon" href="/ambetter-logo-192.png" />
+        <meta name="apple-mobile-web-app-title" content="Brillio" />
+        <link rel="apple-touch-icon" href="/Brillio-logo-192.png" />
         <link rel="icon" type="image/png" href="/favicon.png" />
         <link rel="manifest" href="/manifest.json" />
       </head>

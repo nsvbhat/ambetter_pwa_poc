@@ -1,8 +1,8 @@
 {
-  "id": "/ambetter-health-pwa",
+  "id": "/Brillio-health-pwa",
   "lang": "en-US",
-  "name": "Ambetter Health PWA",
-  "short_name": "Ambetter",
+  "name": "Brillio Health PWA",
+  "short_name": "Brillio",
   "description": "Your health, simplified. Access health information 24/7.",
   "version": "1.0.2",
   "start_url": "/",
@@ -10,13 +10,13 @@
   "display": "standalone",
   "display_override": ["standalone", "window-controls-overlay"],
   "orientation": "portrait-primary",
-  "theme_color": "#ec4899",
-  "background_color": "#ffffff",
+  "theme_color": "#00d4ff",
+  "background_color": "#1a1a2e",
   "prefer_related_applications": false,
   "categories": ["health", "medical"],
   "screenshots": [
     {
-      "src": "/ambetter-logo-512.png",
+      "src": "/Brillio-logo-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "form_factor": "narrow"
@@ -45,19 +45,19 @@
   ],
   "icons": [
     {
-      "src": "/ambetter-logo.png",
+      "src": "/Brillio-logo.png",
       "sizes": "80x80",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/ambetter-logo-192.png",
+      "src": "/Brillio-logo-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/ambetter-logo-512.png",
+      "src": "/Brillio-logo-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"

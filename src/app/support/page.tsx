@@ -18,7 +18,7 @@ const faqs: FAQ[] = [
     category: 'Coverage',
     question: 'What does my plan cover?',
     answer:
-      'Your Ambetter plan includes preventive care, office visits, hospital services, emergency care, mental health services, and prescription drug coverage. Visit your ID card or Health Information page for detailed benefits.',
+      'Your Brillio plan includes preventive care, office visits, hospital services, emergency care, mental health services, and prescription drug coverage. Visit your ID card or Health Information page for detailed benefits.',
   },
   {
     id: '2',
@@ -263,7 +263,7 @@ export default function SupportPage() {
             <div className="bg-white rounded-lg p-4 sm:p-5">
               <div className="text-2xl mb-2">📞</div>
               <p className="font-semibold text-gray-900 text-sm sm:text-base mb-1">Call Us</p>
-              <p className="text-xs sm:text-sm text-pink-600 font-mono">1-800-AMBETTER</p>
+              <p className="text-xs sm:text-sm text-pink-600 font-mono">1-800-Brillio</p>
               <p className="text-xs text-gray-600 mt-2">Available 24/7, 7 days a week</p>
             </div>
 
@@ -271,7 +271,7 @@ export default function SupportPage() {
             <div className="bg-white rounded-lg p-4 sm:p-5">
               <div className="text-2xl mb-2">📧</div>
               <p className="font-semibold text-gray-900 text-sm sm:text-base mb-1">Email Us</p>
-              <p className="text-xs sm:text-sm text-pink-600 font-mono">support@ambetterhealth.com</p>
+              <p className="text-xs sm:text-sm text-pink-600 font-mono">support@Brilliohealth.com</p>
               <p className="text-xs text-gray-600 mt-2">We'll respond within 24 hours</p>
             </div>
 
@@ -289,7 +289,7 @@ export default function SupportPage() {
             <div className="bg-white rounded-lg p-4 sm:p-5">
               <div className="text-2xl mb-2">📍</div>
               <p className="font-semibold text-gray-900 text-sm sm:text-base mb-1">Visit Us</p>
-              <p className="text-xs sm:text-sm text-gray-700">Find a local Ambetter office</p>
+              <p className="text-xs sm:text-sm text-gray-700">Find a local Brillio office</p>
               <button className="text-xs sm:text-sm text-pink-600 font-medium hover:underline mt-2">
                 Find locations
               </button>

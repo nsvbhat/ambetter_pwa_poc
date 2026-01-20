@@ -119,9 +119,9 @@ export default function LoginPage() {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <div className="bg-white rounded-lg p-3 inline-block mb-4">
-            <img src="/ambetter-logo.png" alt="Ambetter Health" className="h-16 w-auto" />
+            <img src="/Brillio-logo.png" alt="Brillio Health" className="h-16 w-auto" />
           </div>
-          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">Ambetter Health</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">Brillio Health</h1>
           <p className="text-pink-100 text-sm sm:text-base">Affordable Health Coverage</p>
         </div>
 

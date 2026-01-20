@@ -1,4 +1,4 @@
-# Ambetter Health PWA
+# Brillio Health PWA
 
 A Progressive Web App (PWA) built with Next.js that demonstrates three key capabilities for dynamic content delivery without requiring app marketplace redeployment.
 
@@ -54,7 +54,7 @@ Create a `.env.local` file:
 
 ```env
 # Dynamic logo URL (Scenario 1)
-LOGO_URL=/ambetter-logo.png
+LOGO_URL=/Brillio-logo.png
 
 # Add other server-side configuration here
 ```
@@ -81,7 +81,7 @@ npm start
 ## Project Structure
 
 ```
-ambetter_pwa/
+Brillio_pwa/
 ├── src/
 │   ├── app/
 │   │   ├── layout.tsx              # Root layout with PWA setup
@@ -250,7 +250,7 @@ After deployment, service workers cache assets aggressively. For updates:
 3. Users will get new version on next visit
 
 ```typescript
-const CACHE_NAME = 'ambetter-pwa-v2'; // Bump version for new deployment
+const CACHE_NAME = 'Brillio-pwa-v2'; // Bump version for new deployment
 ```
 
 ## API Routes Reference
@@ -260,7 +260,7 @@ Returns the current logo URL from environment variable.
 
 ```json
 {
-  "url": "/ambetter-logo.png",
+  "url": "/Brillio-logo.png",
   "lastUpdated": "2025-01-17T10:00:00Z"
 }
 ```
@@ -338,7 +338,7 @@ Returns list of available scenarios.
 
 ## Real-World Use Cases
 
-### Healthcare (Ambetter Focus)
+### Healthcare (Brillio Focus)
 - Update member portal logos and branding
 - Add new health services and specialists
 - Rename form fields for compliance
@@ -368,7 +368,7 @@ Returns list of available scenarios.
 ```bash
 # Clear cache in DevTools or:
 # 1. Go to Application → Cache Storage
-# 2. Delete "ambetter-pwa-v1" cache
+# 2. Delete "Brillio-pwa-v1" cache
 # 3. Refresh page
 ```
 

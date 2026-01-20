@@ -111,7 +111,7 @@ export function generateIDCard(): Blob {
     ctx.fillStyle = '#ffffff';
     ctx.font = 'bold 24px Arial';
     ctx.textAlign = 'center';
-    ctx.fillText('AMBETTER HEALTH', 200, 35);
+    ctx.fillText('Brillio HEALTH', 200, 35);
 
     // Member ID
     ctx.fillStyle = '#000000';

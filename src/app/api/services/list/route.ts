@@ -12,7 +12,7 @@ export async function GET() {
         description: 'View & download your insurance ID card',
         icon: '📇',
         url: '/id-card',
-        color: '#ec4899', // pink
+        color: '#00d4ff', // electric blue
         isNew: false,
       },
       {
@@ -21,7 +21,7 @@ export async function GET() {
         description: 'Search doctors & facilities in-network',
         icon: '🏥',
         url: '/find-care',
-        color: '#2563eb', // blue
+        color: '#00c9a7', // teal
         isNew: false,
       },
       {
@@ -30,7 +30,7 @@ export async function GET() {
         description: 'View & pay your premium',
         icon: '💳',
         url: '/payments',
-        color: '#16a34a', // green
+        color: '#6c3aff', // purple
         isNew: false,
       },
       {
@@ -39,7 +39,7 @@ export async function GET() {
         description: 'Manage & refill prescriptions',
         icon: '💊',
         url: '/prescriptions',
-        color: '#9333ea', // purple
+        color: '#ff6b3a', // orange
         isNew: false,
       },
       {
@@ -48,7 +48,7 @@ export async function GET() {
         description: 'Manage your enrollment & plan',
         icon: '📝',
         url: '/enrollment',
-        color: '#f97316', // orange
+        color: '#00d4ff', // electric blue
         isNew: false,
       },
       {
@@ -57,7 +57,7 @@ export async function GET() {
         description: 'View your health records & history',
         icon: '❤️',
         url: '/health-info',
-        color: '#eab308', // yellow
+        color: '#00c9a7', // teal
         isNew: false,
       },
       {
@@ -66,7 +66,7 @@ export async function GET() {
         description: 'Get help & answers to common questions',
         icon: '💬',
         url: '/support',
-        color: '#ef4444', // red
+        color: '#6c3aff', // purple
         isNew: false,
       },
       {
@@ -75,7 +75,7 @@ export async function GET() {
         description: 'Schedule virtual doctor visits',
         icon: '💻',
         url: '/health-info',
-        color: '#06b6d4', // cyan
+        color: '#00d4ff', // electric blue
         isNew: true,
       },
     ],

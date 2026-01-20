@@ -31,14 +31,14 @@ export default function HomePage() {
           <div className="inline-block mb-4 sm:mb-6">
             <div className="bg-white rounded-lg p-3">
               <img 
-                src="/ambetter-logo.png" // Scenario 1: Change logo URL dynamically from server
-                alt="Ambetter Health" 
+                src="/Brillio-logo.png" // Scenario 1: Change logo URL dynamically from server
+                alt="Brillio Health" 
                 className="h-20 w-auto"
               />
             </div>
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-pink-900 mb-3 sm:mb-4">
-            Ambetter Health
+            Brillio Health
           </h1>
           <p className="text-pink-700 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto mb-6 sm:mb-8">
             Your health, simplified. Access your health information 24/7 with our mobile-first PWA.
@@ -106,7 +106,7 @@ export default function HomePage() {
         {/* PWA Benefits Section */}
         <div className="mb-12 sm:mb-16 lg:mb-20">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 sm:mb-8 lg:mb-10 text-center">
-            Why Ambetter PWA?
+            Why Brillio PWA?
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {/* Benefit 1 */}
@@ -189,7 +189,7 @@ export default function HomePage() {
               </p>
               <div className="bg-pink-50 p-3 sm:p-4 rounded-lg border border-pink-200">
                 <p className="text-xs sm:text-sm text-pink-700 mb-2">
-                  <strong>Email:</strong> demo@ambetter.com
+                  <strong>Email:</strong> demo@Brillio.com
                 </p>
                 <p className="text-xs sm:text-sm text-pink-700 mb-2">
                   <strong>Password:</strong> Any password (min 6 chars)
@@ -213,7 +213,7 @@ export default function HomePage() {
         {/* Footer CTA */}
         <div className="mt-12 sm:mt-16 lg:mt-20 text-center">
           <p className="text-pink-700 text-xs sm:text-sm mb-4">
-            Ready to experience Ambetter Health?
+            Ready to experience Brillio Health?
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Link

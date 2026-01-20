@@ -30,18 +30,18 @@ export default function Navigation() {
   const isHomePage = pathname === '/';
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50">
+    <nav className="bg-[#1a1a2e] shadow-md sticky top-0 z-50 border-b border-[#00d4ff]/20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href={isLoggedIn ? '/dashboard' : '/'} className="flex items-center gap-2 sm:gap-3">
             <img 
-              src="/ambetter-logo.png"
-              alt="Ambetter Health" 
+              src="/Brillio-logo.png"
+              alt="Brillio Health" 
               className="h-8 sm:h-10 w-auto"
             />
-            <span className="hidden sm:inline text-lg sm:text-xl font-bold text-pink-600">
-              Ambetter
+            <span className="hidden sm:inline text-lg sm:text-xl font-bold text-[#00d4ff]">
+              Brillio
             </span>
           </Link>
 
@@ -51,31 +51,31 @@ export default function Navigation() {
               <>
                 <Link
                   href="/dashboard"
-                  className="text-xs sm:text-sm text-gray-600 hover:text-pink-600 transition-colors"
+                  className="text-xs sm:text-sm text-gray-300 hover:text-[#00d4ff] transition-colors"
                 >
                   Dashboard
                 </Link>
                 <Link
                   href="/health-info"
-                  className="text-xs sm:text-sm text-gray-600 hover:text-pink-600 transition-colors"
+                  className="text-xs sm:text-sm text-gray-300 hover:text-[#00d4ff] transition-colors"
                 >
                   Health Info
                 </Link>
                 <Link
                   href="/prescriptions"
-                  className="text-xs sm:text-sm text-gray-600 hover:text-pink-600 transition-colors"
+                  className="text-xs sm:text-sm text-gray-300 hover:text-[#00d4ff] transition-colors"
                 >
                   Prescriptions
                 </Link>
                 <Link
                   href="/payments"
-                  className="text-xs sm:text-sm text-gray-600 hover:text-pink-600 transition-colors"
+                  className="text-xs sm:text-sm text-gray-300 hover:text-[#00d4ff] transition-colors"
                 >
                   Payments
                 </Link>
                 <Link
                   href="/enrollment"
-                  className="text-xs sm:text-sm text-gray-600 hover:text-pink-600 transition-colors"
+                  className="text-xs sm:text-sm text-gray-300 hover:text-[#00d4ff] transition-colors"
                 >
                   Enrollment
                 </Link>
@@ -84,13 +84,13 @@ export default function Navigation() {
               <>
                 <Link
                   href="/"
-                  className="text-xs sm:text-sm text-gray-600 hover:text-pink-600 transition-colors"
+                  className="text-xs sm:text-sm text-gray-300 hover:text-[#00d4ff] transition-colors"
                 >
                   Home
                 </Link>
                 <Link
                   href="/login"
-                  className="bg-pink-600 hover:bg-pink-700 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded text-xs sm:text-sm font-medium transition-colors"
+                  className="bg-[#00d4ff] hover:bg-[#0099cc] text-[#1a1a2e] px-3 sm:px-4 py-1.5 sm:py-2 rounded text-xs sm:text-sm font-medium transition-colors"
                 >
                   Sign In
                 </Link>
@@ -101,65 +101,65 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-1 hover:bg-gray-100 rounded"
+            className="md:hidden p-1 hover:bg-[#252545] rounded"
             aria-label="Toggle menu"
           >
             <div className="space-y-1">
-              <div className="w-6 h-0.5 bg-gray-900"></div>
-              <div className="w-6 h-0.5 bg-gray-900"></div>
-              <div className="w-6 h-0.5 bg-gray-900"></div>
+              <div className="w-6 h-0.5 bg-[#00d4ff]"></div>
+              <div className="w-6 h-0.5 bg-[#00d4ff]"></div>
+              <div className="w-6 h-0.5 bg-[#00d4ff]"></div>
             </div>
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden pt-4 pb-3 border-t border-gray-200 mt-4">
+          <div className="md:hidden pt-4 pb-3 border-t border-[#00d4ff]/20 mt-4">
             {isLoggedIn ? (
               <>
                 <Link
                   href="/dashboard"
-                  className="block text-xs sm:text-sm text-gray-600 hover:text-pink-600 px-2 sm:px-3 py-2 rounded hover:bg-gray-100 transition-colors"
+                  className="block text-xs sm:text-sm text-gray-300 hover:text-[#00d4ff] px-2 sm:px-3 py-2 rounded hover:bg-[#252545] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Dashboard
                 </Link>
                 <Link
                   href="/health-info"
-                  className="block text-xs sm:text-sm text-gray-600 hover:text-pink-600 px-2 sm:px-3 py-2 rounded hover:bg-gray-100 transition-colors"
+                  className="block text-xs sm:text-sm text-gray-300 hover:text-[#00d4ff] px-2 sm:px-3 py-2 rounded hover:bg-[#252545] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Health Info
                 </Link>
                 <Link
                   href="/prescriptions"
-                  className="block text-xs sm:text-sm text-gray-600 hover:text-pink-600 px-2 sm:px-3 py-2 rounded hover:bg-gray-100 transition-colors"
+                  className="block text-xs sm:text-sm text-gray-300 hover:text-[#00d4ff] px-2 sm:px-3 py-2 rounded hover:bg-[#252545] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Prescriptions
                 </Link>
                 <Link
                   href="/payments"
-                  className="block text-xs sm:text-sm text-gray-600 hover:text-pink-600 px-2 sm:px-3 py-2 rounded hover:bg-gray-100 transition-colors"
+                  className="block text-xs sm:text-sm text-gray-300 hover:text-[#00d4ff] px-2 sm:px-3 py-2 rounded hover:bg-[#252545] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Payments
                 </Link>
                 <Link
                   href="/enrollment"
-                  className="block text-xs sm:text-sm text-gray-600 hover:text-pink-600 px-2 sm:px-3 py-2 rounded hover:bg-gray-100 transition-colors"
+                  className="block text-xs sm:text-sm text-gray-300 hover:text-[#00d4ff] px-2 sm:px-3 py-2 rounded hover:bg-[#252545] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Enrollment
                 </Link>
-                <div className="border-t border-gray-200 mt-2 pt-2">
-                  <p className="text-xs text-gray-600 px-2 py-2">{userEmail}</p>
+                <div className="border-t border-[#00d4ff]/20 mt-2 pt-2">
+                  <p className="text-xs text-gray-400 px-2 py-2">{userEmail}</p>
                   <button
                     onClick={() => {
                       handleLogout();
                       setIsMenuOpen(false);
                     }}
-                    className="block w-full text-left text-xs sm:text-sm text-red-600 hover:text-red-700 px-2 sm:px-3 py-2 rounded hover:bg-gray-100 transition-colors"
+                    className="block w-full text-left text-xs sm:text-sm text-[#ff6b3a] hover:text-[#ff8555] px-2 sm:px-3 py-2 rounded hover:bg-[#252545] transition-colors"
                   >
                     Logout
                   </button>
@@ -169,14 +169,14 @@ export default function Navigation() {
               <>
                 <Link
                   href="/"
-                  className="block text-xs sm:text-sm text-gray-600 hover:text-pink-600 px-2 sm:px-3 py-2 rounded hover:bg-gray-100 transition-colors"
+                  className="block text-xs sm:text-sm text-gray-300 hover:text-[#00d4ff] px-2 sm:px-3 py-2 rounded hover:bg-[#252545] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Home
                 </Link>
                 <Link
                   href="/login"
-                  className="block text-xs sm:text-sm text-pink-600 hover:text-pink-700 px-2 sm:px-3 py-2 rounded hover:bg-gray-100 transition-colors font-medium"
+                  className="block text-xs sm:text-sm text-[#00d4ff] hover:text-[#0099cc] px-2 sm:px-3 py-2 rounded hover:bg-[#252545] transition-colors font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Sign In

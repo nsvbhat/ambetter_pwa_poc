@@ -283,10 +283,10 @@ export default function FindCarePage() {
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 sm:p-6 mb-8">
           <h3 className="font-bold text-gray-900 text-sm sm:text-base mb-3">💡 About In-Network Providers</h3>
           <ul className="space-y-2 text-xs sm:text-sm text-gray-700">
-            <li>✓ All listed providers are in-network and covered under your Ambetter plan</li>
+            <li>✓ All listed providers are in-network and covered under your Brillio plan</li>
             <li>✓ Visit an in-network provider to ensure lowest copay and deductible application</li>
             <li>✓ Your copay for office visits ranges from $5-$25 depending on the type of visit</li>
-            <li>✓ Not seeing your preferred provider? Call Member Services at 1-800-AMBETTER</li>
+            <li>✓ Not seeing your preferred provider? Call Member Services at 1-800-Brillio</li>
           </ul>
         </div>
 

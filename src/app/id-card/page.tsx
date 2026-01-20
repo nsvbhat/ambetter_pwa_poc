@@ -27,7 +27,7 @@ export default function IDCardPage() {
     memberId: 'ABT-2026-001234',
     groupNumber: 'DEMO-2026',
     name: 'John Doe',
-    plan: 'Ambetter Affordable Health',
+    plan: 'Brillio Affordable Health',
     effectiveDate: '01/01/2026',
     terminationDate: '12/31/2026',
     copay: '$5-$25',
@@ -38,7 +38,7 @@ export default function IDCardPage() {
     mentalHealth: 'Included',
     urgentCare: 'Included',
     pharmacy24hr: '1-800-PHARMACY',
-    memberServices: '1-800-AMBETTER',
+    memberServices: '1-800-Brillio',
   };
 
   const handleDownloadPDF = async () => {
@@ -46,7 +46,7 @@ export default function IDCardPage() {
     try {
       const pdfContent = `
 =====================================
-           AMBETTER HEALTH
+           Brillio HEALTH
            MEMBER ID CARD
 =====================================
 
@@ -93,7 +93,7 @@ For emergency services, don't delay treatment.
 Generated: ${new Date().toLocaleString()}
 =====================================`;
 
-      await downloadFile('Ambetter-ID-Card.txt', pdfContent, 'text/plain');
+      await downloadFile('Brillio-ID-Card.txt', pdfContent, 'text/plain');
       alert('✅ ID Card downloaded successfully!');
     } catch (error) {
       console.error('Download failed:', error);
@@ -149,7 +149,7 @@ Generated: ${new Date().toLocaleString()}
             <div className="relative z-10 h-full flex flex-col justify-between">
               {/* Header */}
               <div>
-                <h2 className="text-xl sm:text-2xl font-bold mb-2">AMBETTER HEALTH</h2>
+                <h2 className="text-xl sm:text-2xl font-bold mb-2">Brillio HEALTH</h2>
                 <p className="text-pink-100 text-xs sm:text-sm">Member ID Card</p>
               </div>
 

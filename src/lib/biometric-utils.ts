@@ -55,7 +55,7 @@ export async function registerBiometric(userId: string, userName: string): Promi
       publicKey: {
         challenge: randomChallenge,
         rp: {
-          name: 'Ambetter Health',
+          name: 'Brillio Health',
           id: window.location.hostname,
         },
         user: {

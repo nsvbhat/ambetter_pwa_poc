@@ -113,7 +113,7 @@ export default function PWAInstall() {
         <div className="fixed bottom-0 left-0 right-0 bg-blue-600 text-white p-3 sm:p-4 shadow-lg z-50 animate-slideUp">
           <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
             <div>
-              <p className="font-semibold text-sm sm:text-base">🎉 Install Ambetter Health App</p>
+              <p className="font-semibold text-sm sm:text-base">🎉 Install Brillio Health App</p>
               <p className="text-xs sm:text-sm opacity-90">Get quick access to health services on your device</p>
             </div>
             <div className="flex gap-2 flex-shrink-0">

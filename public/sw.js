@@ -1,10 +1,10 @@
-// Service Worker for Ambetter PWA
-const CACHE_VERSION = 'ambetter-v1.0.0';
+// Service Worker for Brillio PWA
+const CACHE_VERSION = 'Brillio-v1.0.0';
 const STATIC_ASSETS = [
   '/',
   '/manifest.json',
   '/offline.html',
-  '/ambetter-logo.png',
+  '/Brillio-logo.png',
   '/favicon.ico',
 ];
 

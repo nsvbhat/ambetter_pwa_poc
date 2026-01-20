@@ -1,6 +1,6 @@
-# 📖 Ambetter PWA - Complete Documentation Index
+# 📖 Brillio PWA - Complete Documentation Index
 
-Welcome! This is your complete guide to the Ambetter Health PWA project. Below is everything you need to know to understand, develop, test, and deploy this application.
+Welcome! This is your complete guide to the Brillio Health PWA project. Below is everything you need to know to understand, develop, test, and deploy this application.
 
 ---
 
@@ -390,7 +390,7 @@ npm run dev
 ## 📞 Documentation Structure
 
 ```
-📁 ambetter_pwa/
+📁 Brillio_pwa/
 ├── 📄 QUICK_START.md        ← Start here!
 ├── 📄 VISUAL_GUIDE.md       ← Understand with diagrams
 ├── 📄 TESTING_GUIDE.md      ← Try examples

@@ -33,7 +33,7 @@ export default function PrescriptionsPage() {
     try {
       // Create a sample prescription PDF content
       const pdfContent = `
-AMBETTER HEALTH - PRESCRIPTION
+Brillio HEALTH - PRESCRIPTION
 ==============================
 
 Patient: John Doe
@@ -52,7 +52,7 @@ This is a sample prescription document.
 Please contact your pharmacy to refill.
       `;
 
-      await downloadFile('Ambetter-Prescriptions.txt', pdfContent, 'text/plain');
+      await downloadFile('Brillio-Prescriptions.txt', pdfContent, 'text/plain');
     } catch (error) {
       console.error('Download failed:', error);
       alert('Failed to download prescription');
