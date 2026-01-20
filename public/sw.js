@@ -4,7 +4,7 @@ const STATIC_ASSETS = [
   '/',
   '/manifest.json',
   '/offline.html',
-  '/Brillio-logo.png',
+  '/Brillio-logo-new.png',
   '/favicon.ico',
 ];
 

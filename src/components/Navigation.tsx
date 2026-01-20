@@ -36,7 +36,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link href={isLoggedIn ? '/dashboard' : '/'} className="flex items-center gap-2 sm:gap-3">
             <img 
-              src="/Brillio-logo.png"
+              src="/Brillio-logo-new.png"
               alt="Brillio Health" 
               className="h-8 sm:h-10 w-auto"
             />
@@ -82,18 +82,18 @@ export default function Navigation() {
               </>
             ) : (
               <>
-                <Link
+                {/* <Link
                   href="/"
                   className="text-xs sm:text-sm text-gray-300 hover:text-[#00d4ff] transition-colors"
                 >
                   Home
-                </Link>
-                <Link
+                </Link> */}
+                {/* <Link
                   href="/login"
                   className="bg-[#00d4ff] hover:bg-[#0099cc] text-[#1a1a2e] px-3 sm:px-4 py-1.5 sm:py-2 rounded text-xs sm:text-sm font-medium transition-colors"
                 >
                   Sign In
-                </Link>
+                </Link> */}
               </>
             )}
           </div>

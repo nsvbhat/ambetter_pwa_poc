@@ -54,7 +54,7 @@ Create a `.env.local` file:
 
 ```env
 # Dynamic logo URL (Scenario 1)
-LOGO_URL=/Brillio-logo.png
+LOGO_URL=/Brillio-logo-new.png
 
 # Add other server-side configuration here
 ```
@@ -260,7 +260,7 @@ Returns the current logo URL from environment variable.
 
 ```json
 {
-  "url": "/Brillio-logo.png",
+  "url": "/Brillio-logo-new.png",
   "lastUpdated": "2025-01-17T10:00:00Z"
 }
 ```

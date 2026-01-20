@@ -1,16 +1,16 @@
 const sharp = require('sharp');
 const path = require('path');
 
-const inputPath = path.join(__dirname, 'public/Brillio-logo.png');
+const inputPath = path.join(__dirname, 'public/Brillio-logo-new.png');
 
 Promise.all([
-  sharp(inputPath).resize(192, 192, { fit: 'contain', background: { r: 255, g: 255, b: 255, alpha: 1 } }).png().toFile(path.join(__dirname, 'public/Brillio-logo-192.png')),
-  sharp(inputPath).resize(512, 512, { fit: 'contain', background: { r: 255, g: 255, b: 255, alpha: 1 } }).png().toFile(path.join(__dirname, 'public/Brillio-logo-512.png')),
+  sharp(inputPath).resize(192, 192, { fit: 'contain', background: { r: 255, g: 255, b: 255, alpha: 1 } }).png().toFile(path.join(__dirname, 'public/Brillio-logo-new-192.png')),
+  sharp(inputPath).resize(512, 512, { fit: 'contain', background: { r: 255, g: 255, b: 255, alpha: 1 } }).png().toFile(path.join(__dirname, 'public/Brillio-logo-new-512.png')),
 ])
   .then(() => {
     console.log('✅ Icons resized successfully!');
-    console.log('   - Brillio-logo-192.png');
-    console.log('   - Brillio-logo-512.png');
+    console.log('   - Brillio-logo-new-192.png');
+    console.log('   - Brillio-logo-new-512.png');
   })
   .catch(err => {
     console.error('❌ Error resizing icons:', err);
