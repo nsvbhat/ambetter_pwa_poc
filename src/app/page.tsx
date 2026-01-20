@@ -17,11 +17,11 @@ export default function HomePage() {
   }, [router]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700">
+    <div className="min-h-screen bg-[#7f5bff]">
       <Navigation />
-<br></br>
+
       {/* Version Badge */}
-      <div className="fixed top-16 right-4 bg-[#00d4ff] text-[#1a1a2e] text-xs sm:text-sm px-3 py-1.5 rounded-full font-semibold shadow-lg z-40">
+      <div className="fixed top-16 right-4 bg-white text-[#7f5bff] text-xs sm:text-sm px-3 py-1.5 rounded-full font-semibold shadow-lg z-40">
         {APP_VERSION.split('-')[1]}
       </div>
 

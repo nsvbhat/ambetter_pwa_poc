@@ -10,8 +10,8 @@
   "display": "standalone",
   "display_override": ["standalone", "window-controls-overlay"],
   "orientation": "portrait-primary",
-  "theme_color": "#8b5cf6",
-  "background_color": "#8b5cf6",
+  "theme_color": "#7f5bff",
+  "background_color": "#7f5bff",
   "prefer_related_applications": false,
   "categories": ["health", "medical"],
   "screenshots": [

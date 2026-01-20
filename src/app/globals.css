@@ -1,11 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
 
 :root {
-  --background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 50%, #7c3aed 100%);
-  --foreground: #ffffff;
-  --primary: #00d4ff;
-  --primary-dark: #0099cc;
-  --accent: #6c3aff;
+  --primary-font: "Outfit", sans-serif;
+  --green: #5dd075;
+  --purple: hsl(252, 33%, 65%);
+  --text-bright: #ebebeb;
+  --text-base: #d7d7d7;
+  --text-dim: #afafaf;
+  --bg-color: #141414;
+  --indigo-brillio: #211747;
+  --green-brillio: #2cc84d;
+  --nav-border: rgba(235, 235, 235, 0.25);
+  --navbar-bg: rgba(20, 20, 20, 0.8);
+  --navbar-dropdown-bg: rgba(20, 20, 20, 0.95);
+  --background: #7f5bff;
+  --foreground: #ebebeb;
+  --primary: #5dd075;
+  --primary-dark: #2cc84d;
+  --accent: #211747;
   --accent-teal: #00c9a7;
   --accent-orange: #ff6b3a;
 }
@@ -15,20 +28,20 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-accent: var(--accent);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--primary-font);
+  --font-mono: var(--primary-font);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 50%, #7c3aed 100%);
-    --foreground: #ffffff;
+    --background: #7f5bff;
+    --foreground: #ebebeb;
   }
 }
 
 body {
-  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 50%, #7c3aed 100%);
+  background: #7f5bff;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--primary-font);
   min-height: 100vh;
 }

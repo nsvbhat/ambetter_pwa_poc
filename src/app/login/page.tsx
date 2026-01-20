@@ -107,7 +107,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700 flex items-center justify-center px-4 py-8">
+    <div className="min-h-screen bg-[#7f5bff] flex items-center justify-center px-4 py-8">
       <Link 
         href="/"
         className="fixed top-4 left-4 bg-white/20 hover:bg-white/30 text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg font-medium transition-all text-xs sm:text-sm flex items-center gap-2 backdrop-blur-sm"
@@ -122,10 +122,10 @@ export default function LoginPage() {
             <img src="/Brillio-logo-new.png" alt="Brillio Health" className="h-16 w-auto" />
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2">Brillio Health</h1>
-          <p className="text-gray-200 text-sm sm:text-base">Affordable Health Coverage</p>
+          <p className="text-gray-100 text-sm sm:text-base">Affordable Health Coverage</p>
         </div>
 
-        <div className="bg-[#252545] rounded-lg shadow-xl p-6 sm:p-8">
+        <div className="bg-white/10 backdrop-blur-md rounded-lg shadow-xl p-6 sm:p-8">
           <h2 className="text-2xl font-bold text-[#00d4ff] mb-6">Sign In</h2>
 
           {error && (
