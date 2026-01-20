@@ -206,12 +206,103 @@ useEffect(() => {
 3. Click "Install app" or use browser menu
 4. App installs as standalone window
 
-### On iOS
+### On iOS (Physical Device)
 
 1. Open app in Safari
 2. Tap Share button
 3. Select "Add to Home Screen"
 4. App installs with native-like experience
+
+### On iOS Simulator
+
+#### Prerequisites
+- Xcode installed (15+ GB download)
+- Or: Test on real iOS device on same WiFi network
+
+#### Setup Steps
+
+**1. Ensure Xcode is installed:**
+```bash
+xcode-select -p
+# Output: /Library/Developer/CommandLineTools or /Applications/Xcode.app/...
+```
+
+If not installed, install via:
+- **App Store**: Search "Xcode" → Get → Install (easiest)
+- **Command Line**: `xcode-select --install`
+
+**2. Start the dev server:**
+```bash
+npm run dev
+# Server runs on http://localhost:3000
+```
+
+**3. Open iOS Simulator:**
+```bash
+# Once Xcode is installed, run:
+open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app
+
+# Or use xcrun (faster):
+xcrun simctl boot iPhone15
+open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app
+```
+
+**4. Get your local IP address:**
+```bash
+ipconfig getifaddr en0
+# Example output: 192.168.1.100
+```
+
+**5. In Safari on Simulator:**
+- Tap address bar
+- Type: `http://192.168.1.100:3000` (replace with your IP)
+- Press Enter
+
+**6. Install PWA on Home Screen:**
+- Tap Share button (↗️)
+- Scroll down → Tap "Add to Home Screen"
+- Verify app name → Tap "Add"
+- App appears as icon on home screen
+
+#### Testing Features in Simulator
+
+- **Biometric Setup**: Simulator prompts simulate Face ID/Touch ID
+- **Offline Mode**: Simulator → Device → Network → Disconnect
+- **Device Sizes**: Simulator → Device → Choose different device types
+- **Screenshots**: Simulator → File → Save Screenshot
+- **Video Recording**: Simulator → File → Video Recording
+
+#### Troubleshooting iOS Simulator
+
+| Issue | Solution |
+|-------|----------|
+| Simulator won't open | Install full Xcode from App Store |
+| Connection refused | Use correct IP from `ipconfig getifaddr en0`, not localhost |
+| Biometric not working | Simulator might not support some biometric APIs; test on real device |
+| Cache issues | Simulator → Erase All Content and Settings → restart dev server |
+| Slow performance | Reduce Simulator window size, close other apps |
+
+#### Real Device Testing (Better Alternative)
+
+If Xcode takes too long, test on a real iOS device instead:
+
+```bash
+# 1. Get your Mac's IP
+ipconfig getifaddr en0
+
+# 2. Connect iPhone to same WiFi network
+# 3. On iPhone Safari, go to:
+# http://YOUR_IP:3000
+
+# 4. Add to Home Screen (same as simulator)
+```
+
+**Advantages of real device:**
+- ✅ Full biometric support (Face ID, Touch ID)
+- ✅ Faster performance
+- ✅ Real offline testing
+- ✅ Better service worker behavior
+- ✅ No 15GB+ download
 
 ### On Android
 
@@ -429,3 +520,7 @@ For issues or questions:
 ---
 
 **Built with ❤️ using Next.js and PWA technologies**
+
+
+
+open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app
