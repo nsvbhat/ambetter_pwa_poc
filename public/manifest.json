@@ -46,7 +46,7 @@
   "icons": [
     {
       "src": "/Brillio-logo-new.png",
-      "sizes": "80x80",
+      "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
